@@ -32,10 +32,11 @@ gem 'spring',        group: :development
 # Use unicorn as the app server
 gem 'unicorn'
 
-# Use Capistrano for deployment
-gem 'capistrano-rails', group: :development
-gem 'rake', '10.3.2'
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
+group :development do
+  # Use Capistrano for deployment
+  gem 'capistrano-rails', require: false
+  gem 'capistrano3-unicorn', require: false
+  gem 'capistrano-rvm'
+  gem 'rake', '10.3.2'
+end
 
