@@ -17,7 +17,14 @@ role :db,  %w{rails@128.199.229.42}
 
 server '128.199.229.42', user: 'rails', roles: %w{web}
 
-
+production_secrets = "#{File.dirname(__FILE__)}/../secrets.production.yml"
+if FileTest.file?(production_secrets)
+  require 'yaml'
+  secret = YAML.load_file(production_secrets)
+  set :default_env, {
+    'SECRET_KEY_BASE' => secret['production']['secret_key_base']
+  }
+end
 # Custom SSH Options
 # ==================
 # You may pass any option but keep in mind that net/ssh understands a
