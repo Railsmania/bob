@@ -39,6 +39,3 @@ group :development do
   gem 'capistrano-rvm'
   gem 'rake', '10.3.2'
 end
-
-# Stylesheets
-gem "twitter-bootstrap-rails"
