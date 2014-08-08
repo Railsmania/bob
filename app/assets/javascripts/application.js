@@ -15,3 +15,5 @@
 //= require turbolinks
 //= require_tree .
 //= stub bootstrap.js
+//= stub plugins/flot/flot-data
+//= stub plugins/dataTables/dataTables.bootstrap
