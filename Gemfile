@@ -39,3 +39,7 @@ group :development do
   gem 'rake', '10.3.2'
   gem 'brakeman', '2.6.1'
 end
+
+# for authentication
+gem 'omniauth', '1.2.2'
+gem 'omniauth-digitalocean', '0.1.0'

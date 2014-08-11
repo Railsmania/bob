@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   get '/dashboard' => 'dashboard#index'
+  get '/auth/:provider/callback', to: 'sessions#create'
+  get '/auth/failure', to: 'sessions#failure'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
