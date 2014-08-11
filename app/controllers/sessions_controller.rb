@@ -1,8 +1,18 @@
 class SessionsController < ApplicationController
+  skip_before_filter :verify_session
+  
+  def new
+  end
+  
   def create
-    @user = User.find_or_create_from_auth_hash(auth_hash)
-    self.current_user = @user
-    redirect_to '/'
+    session_instance = Session.find_or_create_by(content: auth_hash.to_s)
+    session[:active] = session_instance.id
+    redirect_to dashboard_path
+  end
+  
+  def destroy
+    reset_session
+    redirect_to auth_new_path
   end
   
   def failure
