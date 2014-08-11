@@ -39,4 +39,3 @@ group :development do
   gem 'rake', '10.3.2'
   gem 'brakeman', '2.6.1'
 end
-
