@@ -2,7 +2,7 @@
 lock '3.2.1'
 
 set :application, 'bob'
-set :scm, :git
+set :scm, 'copy'
 # if using the git@ address I get authentication errors
 set :repo_url, 'https://github.com/Railsmania/bob.git'
 
