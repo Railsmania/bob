@@ -11,6 +11,7 @@ class SessionsController < ApplicationController
   end
   
   def destroy
+    Session.destroy(session[:active])
     reset_session
     redirect_to auth_new_path
   end
