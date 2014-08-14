@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  get '/dashboard' => 'dashboard#index'
+  get '/dashboards' => 'dashboards#index'
   get '/auth/new', to: 'sessions#new'
   get '/auth/:provider/callback', to: 'sessions#create'
   get '/auth/failure', to: 'sessions#failure'
