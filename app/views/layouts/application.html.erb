@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<%= render partial: 'layouts/dashboard' %>
+<%= render partial: "layouts/#{controller_name}" %>
 
 <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>
