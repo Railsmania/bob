@@ -17,3 +17,4 @@
 //= stub bootstrap.js
 //= stub plugins/flot/flot-data
 //= stub plugins/dataTables/dataTables.bootstrap
+//= stub plugins/morris/morris-data.js
