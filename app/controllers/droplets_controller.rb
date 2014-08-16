@@ -1,0 +1,2 @@
+class DropletsController < ApplicationController
+end
