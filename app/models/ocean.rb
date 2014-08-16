@@ -11,10 +11,10 @@ class Ocean
   end
   
   def droplets
-    JSON.parse(@conn.get('droplets').body)['droplets']
+    @droplets ||= JSON.parse(@conn.get('droplets').body)['droplets']
   end
   
   def images
-    JSON.parse(@conn.get('images').body)['images']
+    @images ||= JSON.parse(@conn.get('images').body)['images']
   end
 end
