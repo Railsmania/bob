@@ -6,8 +6,29 @@
             <div class="col-lg-12">
                 <h1 class="page-header">Droplets</h1>
             </div>
-            <!-- /.col-lg-12 -->
+            <!-- /.row -->
+            <%= render partial: :droplet, collection: ocean.droplets %>
         </div>
-        <%= @droplets %>
+        <!-- Split button -->
+        <div class="btn-group">
+          <button type="button" class="btn btn-info">Action</button>
+          <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+            <span class="caret"></span>
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div>
+        <%= ocean.droplets.count %>
+        <br /></br />
+        <%= ocean.droplets %>
+        <br /><br />
+        <%= ocean.images %>
+        
     </div>
 </div>
