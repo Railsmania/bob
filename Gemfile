@@ -44,3 +44,6 @@ end
 # for authentication
 gem 'omniauth', '1.2.2'
 gem 'omniauth-digitalocean', '0.1.0'
+
+gem 'faraday', '0.9.0'
+gem 'pry'

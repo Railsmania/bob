@@ -6,5 +6,9 @@ class ApplicationController < ActionController::Base
   
   def verify_session
     redirect_to auth_new_path unless Session.exists?(id: session[:active])
-  end 
+  end
+  
+  def current_session_auth
+    JSON.parse(Session.where(id: session[:active]).first.content)
+  end
 end
