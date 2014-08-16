@@ -40,7 +40,7 @@
             </button>
             <ul class="dropdown-menu" role="menu">
               <li><a href="#">Snapshot</a></li>
-              <li><a href="#">Password Reset</a></li>
+              <li><%= link_to 'Password Reset', password_reset_droplet_path(droplet['id'])%></li>
               <li class="divider"></li>
               <li><a href="#">Power Off</a></li>
             </ul>
