@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   end
   
   def create
-    session_instance = Session.find_or_create_by(content: auth_hash.to_s)
+    session_instance = Session.find_or_create_by(content: auth_hash.to_json)
     session[:active] = session_instance.id
     redirect_to dashboards_path
   end

@@ -4,6 +4,11 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   get '/dashboards' => 'dashboards#index'
+  resources :droplets do
+    member do
+      get 'password_reset'
+    end
+  end
   get '/auth/new', to: 'sessions#new'
   get '/auth/:provider/callback', to: 'sessions#create'
   get '/auth/failure', to: 'sessions#failure'
